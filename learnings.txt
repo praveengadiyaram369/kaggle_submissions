@@ -1,0 +1,19 @@
+################################### Important notes ############################
+
+-------- Data Exploration -> Data Preprocessing -> 
+
+1) Before starting to code, always try to outline the task as a list of points and then start working on each point. We can also add interesting questions along with just correlation analysis among the input features.
+
+2) Data Exploration: we can use the functions info(), describe() on dataframes to get a view of the input data.
+    a) For numerical data: Make histograms, correlation plots(heatmaps), pivot tables.
+    b) For Categorical data: Bar charts, pivot tables.
+
+3) Split the data into numeric variables and categorical variables.
+4) Plot histograms on numeric values and check whether the data is following any normal distribution.
+5) correlation plots would be useful in case of regression problems.
+6) Use pivot tables to check average values of different numerical features for each label.
+7) Apply barplots on categorical data and observe the ratio's of categorical values. If any feature has too many distinct values then we need to simplify/reduce the data with some feature engineering techniques. 
+
+8) If the numerical data is normally distributed then replace the missing values with the mean, otherwise with median.
+9) we can use pandas get_dummies function to generate features for categorical data(similar to onehot encoding).
+10) Always use k-fold cross validation for 
