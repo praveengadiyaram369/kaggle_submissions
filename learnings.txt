@@ -16,4 +16,12 @@
 
 8) If the numerical data is normally distributed then replace the missing values with the mean, otherwise with median.
 9) we can use pandas get_dummies function to generate features for categorical data(similar to onehot encoding).
-10) Always use k-fold cross validation for 
+10) Always use k-fold cross validation for improving the model performance.
+11) Identify the Target and features clearly before building the model and represent with y and X respectively.
+12) Basic model validation: Calculate the Mean Absolute Error to check the error in the case of regression tasks.
+13) Underfitting and Overfitting are two phenomenas/scenarios where model performs poorly on training data and test data respectively.
+
+14) We need to optimize the parameters of the model to avoid both underfitting and overfitting.
+15) While optimizing consider splitting the data into train and test datasets using train_test_split and use some model validation techniques to tune hypterparameters.
+16) Once the hypterparameter values are tuned then use complete train data to train the model and use that model for prediction/submission purpose.
+17) 
