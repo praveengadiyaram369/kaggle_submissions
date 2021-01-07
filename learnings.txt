@@ -24,4 +24,33 @@
 14) We need to optimize the parameters of the model to avoid both underfitting and overfitting.
 15) While optimizing consider splitting the data into train and test datasets using train_test_split and use some model validation techniques to tune hypterparameters.
 16) Once the hypterparameter values are tuned then use complete train data to train the model and use that model for prediction/submission purpose.
-17) 
+17) We can handle the missing values with either dropping the columns/rows or replacing/imputing with some value. Imputing value can be mean, median, min, zero ...... We should test different imputing techniques and finalize the method which is giving the lowest error.
+
+18) Categorical values: there are mainly two types of categorical values, nominal and ordinal.
+    If we can express the categories in any particular order, then it is ordinal values. If we cannot compare the values, then they are nominal values. Generally, to handle the missing values in categorical columns we replace the missing value with its mode. 
+
+19) To handle nominal values, we can use the one-hot encoding technique. For ordinal values, we can use the label encoding technique where we assign a value to one category according to its order.
+
+20) While performing the label encoding techniques, we should split the categorical columns into 2 types such as good_cols and bad_cols. Bad columns are those categorical columns which have different values in train and test splits. So, drop the categorical which are having different unique values in train and test splits and apply label encoding technique on good_cols. However, you can also come up with your own encoding technique which handles all values.
+
+21) Number of unique entries in a categorical column gives the cardinality of the categorical variable. It is suggested to perform the one-hot encoding technique only when the variable has low cardinality, if the categorical variable has high cardinality, then either we should drop or use label encoding technique.
+
+22) In both label encoding and one-hot encoding the original categorical column data needs to be dropped after the encoding.
+23) Pipelining is a technique which is used to bundle Preprocessing and modelling steps so we can use the whole bundle as if it were a single step. 
+24) Pipeline contains list of tuples where each tuple represents a processing steps such as Imputer, Onehotencoder ....
+25) To bundle different Preprocessing steps we can use Transformers which groups many pipelines to one. 
+
+26) Ensemble methods combine the results/predictions of several models. Ex: Randomforests which averages the predictions of many different decision trees, Gradient boosting which goes through cycles to iteratively add models into an ensemble...
+
+27) Gradient Boosting cycle steps:
+    a) Naive model
+    b) make predictions
+    c) calculate loss
+    d) train new model
+    e) add new model to the ensemble            --> and repeat from step a.
+
+28) XGBoost - Extreme Gradient Boosting used for better performance and speed.
+
+29) Both Randomforests and XGBoost has a common hypterparameter named n_estimators which specifies how many times to go through the modelling cycle or how many no of models we include in the ensemble.
+
+30) Data Leakage is a scenario where some of the features in the training dataset are related to future occurance of the event/prediction. So, we should look at each column of the data and drop the columns/features which are not available at the time of training. otherwise, the model ends up with overfitting.
