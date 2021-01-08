@@ -1,6 +1,19 @@
+Credits:
+    1) https://www.kaggle.com/learn/
+    2) https://www.kaggle.com/kenjee/titanic-project-example/notebook
+
 ################################### Important notes ############################
 
--------- Data Exploration -> Data Preprocessing -> 
+Basic steps in any ML problems:
+    a) Understanding the shape of the data just using plots for numerical and categorical values.
+    b) Data Cleaning 
+    c) Data Exploration
+    d) Feature engineering
+    d) Data Preprocessing
+    e) Model building
+    f) Model tuning
+    g) Ensemble model building
+    h) Results 
 
 1) Before starting to code, always try to outline the task as a list of points and then start working on each point. We can also add interesting questions along with just correlation analysis among the input features.
 
@@ -54,3 +67,5 @@
 29) Both Randomforests and XGBoost has a common hypterparameter named n_estimators which specifies how many times to go through the modelling cycle or how many no of models we include in the ensemble.
 
 30) Data Leakage is a scenario where some of the features in the training dataset are related to future occurance of the event/prediction. So, we should look at each column of the data and drop the columns/features which are not available at the time of training. otherwise, the model ends up with overfitting.
+
+31) 
