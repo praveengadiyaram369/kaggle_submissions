@@ -68,4 +68,6 @@ Basic steps in any ML problems:
 
 30) Data Leakage is a scenario where some of the features in the training dataset are related to future occurance of the event/prediction. So, we should look at each column of the data and drop the columns/features which are not available at the time of training. otherwise, the model ends up with overfitting.
 
-31) 
+31) Every machine learning model contains two types of parameters. Model parameters and Hypterparameters.
+    a) Model parameters: the parameters in the model that must be determined using training data set.
+    b) Hypterparameters: the adjustable parameters that must be tuned in order to obtain a model with optimal performance.

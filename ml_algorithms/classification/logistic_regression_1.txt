@@ -1,0 +1,50 @@
+Below are few parameters and hyperparameters of popular machine learning algorithms. we can get the default the parameters of any algorithm using the get_params() method. n_jobs and random_state are few common parameters of most of the algorithms. n_jobs is generally set to -1, in order to utilize all cores of the machine for computation. setting random_state to a fixed value throughout the program helps to generate same class labels internally by the algorithm. 
+
+##################### LogisticRegression ##################### 
+
+1) Default Parameters:
+        {'C': 1.0,
+        'class_weight': None,
+        'dual': False,
+        'fit_intercept': True,
+        'intercept_scaling': 1,
+        'l1_ratio': None,
+        'max_iter': 100,
+        'multi_class': 'auto',
+        'n_jobs': None,
+        'penalty': 'l2',
+        'random_state': None,
+        'solver': 'lbfgs',
+        'tol': 0.0001,
+        'verbose': 0,
+        'warm_start': False}
+
+2) LogisticRegression is mainly used for Binary and Multi-class classification purpose where the classification data is linearly seperable. The algorithm is similar to Linear regression, but the linear regression can be easily manipulated with outliers which results in misclassification of data. Modelling binary classification using best fit line is very bad idea, we should come up with a better approach which classifies the data.
+
+3) LogisticRegression creates a better best fit line using the sigmoid function which helps to mitigate the effect of outliers. Sigmoid function transforms data into the range of (0, 1). So, the sigmoid function helps LogisticRegression algorithm to handle the outliers and gives better classification results.
+
+4) LogisticRegression can also be applied for multiclass classification problems, we just have to set the 'multi_class' parameter to 'ovr' specifying One versus Rest approach. Output of multiclass classification will be the probability of classes, so we need to consider the class with higher probability as the target class.
+
+5) Important hyperparameters for LogisticRegression are 'max_iter', 'C', 'penalty', 'solver'.
+
+6) 'C' parameter is the regularization parameter(Inverse of regularization strength), lower value of 'C' tends to underfit and higher values tend to overfit.
+    lower value of 'C' --> increase in regularization strength --> simpler models --> underfit the data
+    higher value of 'C' --> decrease in regularization strength --> complex models --> overfit the data
+
+    Ex:- 'C' : np.logspace(-4, 4, 20)
+
+7) 'max_iter' denotes the maximum no.of iterations taken for the solvers to converge.
+
+    Ex:- 'max_iter' : [100, 1000,2500, 5000]
+
+8) 'penalty' parameter specifies the norm used in the penalization.
+
+    Ex:- 'penalty' : ['l1', 'l2', 'elasticnet', 'none']
+
+9) 'solver' parameter specifes the actual algorithm which is used in the optimization problem.
+
+    - for smaller datasets --> 'liblinear' is a good choice
+    - for larger datasets --> 'sag', 'saga' is preferable
+    - for multiclass classification --> 'newton-cg','sag','saga', 'lbfgs'
+
+    Ex:- 'solver' : ['lbfgs','newton-cg','liblinear','sag','saga']

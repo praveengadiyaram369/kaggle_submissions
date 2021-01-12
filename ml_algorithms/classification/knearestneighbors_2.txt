@@ -1,0 +1,32 @@
+##################### KNeighborsClassifier #####################
+
+1) Default Parameters:
+        {'algorithm': 'auto',
+        'leaf_size': 30,
+        'metric': 'minkowski',
+        'metric_params': None,
+        'n_jobs': None,
+        'n_neighbors': 5,
+        'p': 2,
+        'weights': 'uniform'}
+
+Knn classifier is a simple classifier which works on the basis on the voting of nearest neighbours calculated with some distance measure. Parameters such as 'algorithm', 'n_neighbors', 'p', 'weights' are used frequently for optimization purpose.
+
+2) 'n_neighbors' is used to consider the number of neighbours used by the algorithm for voting purpose.
+
+    Ex:- 'n_neighbors' : [3,5,7,9]
+
+3) 'weights' parameter is used to determine the weight function used in the prediction. It can take two type of values, either uniform or distance. 'uniform' sets uniform weights for all points in the neighborhood and distance gives the weight points as the inverse of the distance.
+
+    Ex:- 'weights' : ['uniform', 'distance']
+
+4) 'p' parameter denotes the power parameter for the minkowski metric. It can take either value 1 or 2.
+
+    - p = 1, manhattan distance(l1)
+    - p = 2, euclidean distance(l2)
+    
+    Ex:- 'p' : [1,2]
+
+5) 'algorithm' parameter specifies the algorithm used to compute the nearest neighbors.
+
+    Ex:- 'algorithm' : ['auto', 'ball_tree','kd_tree']

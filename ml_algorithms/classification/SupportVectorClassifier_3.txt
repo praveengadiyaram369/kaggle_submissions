@@ -1,0 +1,54 @@
+##################### SVC #####################
+
+1) Default Parameters:
+        {'C': 1.0,
+        'break_ties': False,
+        'cache_size': 200,
+        'class_weight': None,
+        'coef0': 0.0,
+        'decision_function_shape': 'ovr',
+        'degree': 3,
+        'gamma': 'scale',
+        'kernel': 'rbf',
+        'max_iter': -1,
+        'probability': False,
+        'random_state': None,
+        'shrinking': True,
+        'tol': 0.001,
+        'verbose': False}
+
+2) SupportVectorClassifier creates a decision boundary which makes the distinction between two or more classes. It is easy to draw the decision boundaries in case of linearly seperable classes. Otherwise, SVC tries to generate a complex boundary between the two classes. During this process, there is a chance of overfitting the data.
+
+3) In order to prevent the overfitting of the training data, SVC uses 'soft margin' SVM which allows to draw the decision boundary with some degree of missclassification. This results in better generalized model and works good on test data.
+
+4) The expense of missclassified points is handled by 'C' parameter where it adds a penalty for each misclassified points.
+    - 'C' is small --> low penalty with large margin decision boundary --> more misclassifications --> underfitting
+    - 'C' is large --> high penalty with small margin decision boundary --> less missclassifications --> overfitting
+
+    Ex:- 'C': [.1, 1, 10, 100, 1000]
+
+5) In most cases, the data is not linearly seperable, then the SVC transforms the data into higher dimensional feature space using kernel functions, so that the data becomes linearly seperable. The algorithm does not actually performs the transformation, but the kernelized SVC computes the decision boundaries in high dimensional feature space. This is called kernel Trick.
+
+6) There are different kernel functions available suchas rbf, linear, poly, sigmoid ....
+    -rbf --> radial basis function is one of the most popular kernel used.
+
+    Ex:- 'kernel': ['rbf', 'poly', 'linear']
+
+7) 'gamma' is the kernel co-efficient for rbf, poly and sigmoid.
+
+        - lower gamma values --> underfitting
+        - large gamma values --> overfitting
+
+        Ex:- 'gamma': [.1,.5,1,2,5,10]
+
+        - rbf kernel --> 'C', gamma needs to be optimized.
+        - linear kernel --> only 'C' needs to be optimized.
+        - poly kernel --> both 'C' and 'degree' needs to be optimized.
+
+8) For SVC, the features needs to be normalized.
+
+
+9) Below are the ranges for gamma and C hyperparameters.
+
+        0.0001 < gamma < 10
+        0.1    < c     < 100
