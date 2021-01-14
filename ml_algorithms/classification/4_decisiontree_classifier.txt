@@ -1,0 +1,52 @@
+##################### DecisionTreeClassifier #####################
+
+1) Default Parameters:
+        {'ccp_alpha': 0.0,
+        'class_weight': None,
+        'criterion': 'gini',
+        'max_depth': None,
+        'max_features': None,
+        'max_leaf_nodes': None,
+        'min_impurity_decrease': 0.0,
+        'min_impurity_split': None,
+        'min_samples_leaf': 1,
+        'min_samples_split': 2,
+        'min_weight_fraction_leaf': 0.0,
+        'presort': 'deprecated',
+        'random_state': None,
+        'splitter': 'best'}
+
+- DecisionTreeClassifier models are simple classifiers which predicts the target variables by learning simple decision tree rules infered from the data features. No need for data normalization or scaling.
+
+- Pruning - Decision Trees can generate complex trees which overfits the data and does not generalize the data. In such cases, we need to apply pruning mechanisms where we can set the minimum no.of samples required at leaf nodes, maximum depth of the tree .... to avoid the problem of overfitting.
+
+- If some class dominates in the input datasets, then there is a chance of bias in the DecisionTree output. It is highly recommended to balance the data before fitting with DecisionTreeClassifier.
+
+- 'max_depth', 'min_samples_split', 'min_samples_leaf', 'max_features', 'criterion' are most used hyperparameters for optimization.
+
+- 'max_depth' parameter specifies the maximum depth of the tree. 
+
+        -- more depth --> more splits --> overfitting the data --> less generalization 
+        -- less depth --> less splits --> underfitting the data
+
+        Ex:- 'max_depth': [15, 20, 25]
+
+- 'min_samples_split' parameter specifies the minimum no.of samples required to split an internal node. There are two types of nodes in a Tree namely internal node and leaf nodes. 
+
+        Ex:- 'min_samples_split': [2,3]
+
+- 'min_samples_leaf' parameter specifies the minimum no. of samples required to be at a leaf node.
+
+        Ex:- 'min_samples_leaf': [2,3]
+
+- In above cases, either performing the split or creating leaf node does not happen if the nodes does not follow the minimum criteria.
+
+- 'max_features' parameter specifies maximum no. of features to consider when looking for the best split. If we don't specify the max_features, then all features are considered at every split step. If we have 50 features and max_features is set to 15, then at each step 15 random features are considered to create the split which helps in overcoming the overfitting of data.
+
+        Ex:- 'max_features': ['auto','sqrt', 10, 'log2']
+
+        - all these functions are applied on n_features values of the input data.
+
+- 'criterion' parameter specifies the function which heps to measure the quality of split. 
+
+        Ex:- 'criterion':['gini','entropy']
