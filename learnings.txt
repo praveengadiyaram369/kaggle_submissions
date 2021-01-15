@@ -71,3 +71,48 @@ Basic steps in any ML problems:
 31) Every machine learning model contains two types of parameters. Model parameters and Hypterparameters.
     a) Model parameters: the parameters in the model that must be determined using training data set.
     b) Hypterparameters: the adjustable parameters that must be tuned in order to obtain a model with optimal performance.
+
+32) Ensemble technique: If we combine/aggregate multiple models to find the output, then it is an ensembling technique.     
+    a) They are two types of Ensemble techniques: Bagging and Boosting.
+    b) Bagging is also called as Bootstrap aggregation(non-sequential).
+    c) Boosting techniques are sequential
+
+33) Bagging: RandomForest algorithm is an example of Bagging.
+    - we consider multiple Decision trees on various sub-samples of the dataset
+    - output of all these models are passed to voting classifiers
+    - majority of these model outputs are considered as the final output.
+    - The technique of using sub-sampling is similar to Row sampling with Replacement(also called as Bootstrap).
+    - The final step of combining the results of individual decision trees is called as aggregater.
+    
+34) Boosting: Adaboost, Gradient Booting, XGBoost are different techniques of Boosting.
+
+35) Adaboost: Adaptive Boosting combines multiple weak learners into a single strong learner.
+    - This method does not follow Bootstrapping(no sub-samples, no row sampling).
+    - But it will create different decision trees with a single split similar tree depth of one(shallow decision trees). These single splits are called decision stumps.
+    - The number of decision stumps depends on the number of features in the dataset.
+    - Similar to Bagging/Randomforests, the result is taken by majority of the decision stumps(weak learners) outputs.
+
+36) Adaboost: At each iteration, algorithm identifies the misclassified data points, increases their weights. So that, the next classifier will pay extra attention to get them right. The weakness is estimated by the weak estimators error rate.
+
+37) Gradient Boosting focuses on difference between the prediction and ground truth. The algorithm tries to gradually minimize the loss function(error). The learning procedure consecutively fit new models to provide a more accurate estimate of the prediction variable.
+
+38) Boosting techniques are sequential, each estimator is built on its predecessors and at each step errors are minimized and also high performance models are generated than the last step(boosting), so hard to scale.
+    
+39) XGBoost is a decision tree based ensemble machine learning algorithm that uses a gradient boosting framework. XGBoost improves upon the base gradient boosting framework through systems optimization and algorithmic enhancements.
+
+40) XGBoost features: 
+    credits: https://towardsdatascience.com/https-medium-com-vishalmorde-xgboost-algorithm-long-she-may-rein-edd9f99be63d
+
+        a) System optimization:
+            - Parallelized implementataion of sequential tree building process.
+            - Tree pruning using depth first approach.
+            - Hardware optimization with cache awareness and out-of-core computing.
+            
+        b) Algorithmic enhancements:
+            - Avoid overfitting with regularization approaches such as Lasso(L1) and Ridge(L2).
+            - Efficient handling of missing data.
+            - In-built cross-validation capability.
+
+41) (Decision Tree -> Bagging -> RandomForest -> Boosting -> Adaboost -> Gradient Boosting -> XGBoost)
+
+42) 
