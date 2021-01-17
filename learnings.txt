@@ -115,4 +115,10 @@ Basic steps in any ML problems:
 
 41) (Decision Tree -> Bagging -> RandomForest -> Boosting -> Adaboost -> Gradient Boosting -> XGBoost)
 
-42) 
+42) z-score normalization transforms the data into the range of distribution with mean at zero(0) and points at 1 standard deviation from the mean. 
+
+43) To avoid one feature effect dominating on other effects, we should normalize the data with their z-scores. If possible all the continuous columns/features.
+
+44) Target encoding for categorical values: using target for encoding purpose rather than using one-hot encoding. consider the encoding value as mean of target values by grouping with categorical feature. To overcome overfitting of this technique, we replace the least group mean values with total mean of target column.
+
+45) 

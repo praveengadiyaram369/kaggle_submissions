@@ -1,0 +1,62 @@
+##################### XGBClassifier #####################
+
+1) Default Parameters:
+        {'objective': 'binary:logistic',
+        'base_score': None,
+        'booster': None,
+        'colsample_bylevel': None,
+        'colsample_bynode': None,
+        'colsample_bytree': None,
+        'gamma': None,
+        'gpu_id': None,
+        'importance_type': 'gain',
+        'interaction_constraints': None,
+        'learning_rate': None,
+        'max_delta_step': None,
+        'max_depth': None,
+        'min_child_weight': None,
+        'missing': nan,
+        'monotone_constraints': None,
+        'n_estimators': 100,
+        'n_jobs': None,
+        'num_parallel_tree': None,
+        'random_state': None,
+        'reg_alpha': None,
+        'reg_lambda': None,
+        'scale_pos_weight': None,
+        'subsample': None,
+        'tree_method': None,
+        'validate_parameters': None,
+        'verbosity': None}
+
+- Credits: https://www.kaggle.com/prashant111/a-guide-on-xgboost-hyperparameters-tuning, https://www.kaggle.com/kenjee/titanic-project-example
+
+- below are the important hyperparameters of xgboost
+
+- 'gamma' specifies the minimum loss reduction required to make a split. A node split only happens when there is positive reduction in loss function. 
+
+        Ex:- 'gamma': [0,.01,.1,0.5,1,10,100]
+
+- 'max_depth' same as decision tree.
+
+        Ex:- 'max_depth': [2, 4, 5, 8, 10, 12, None]
+
+- 'min_child_weight' specifies the minimum sum of weights required of all observations required in a child.
+
+        Ex:- 'min_child_weight':[0,.01,0.1,1,10,100]
+
+- 'subsample' specifies the fraction of observations to be randomly samples for each tree.
+
+        Ex:- 'subsample': [0.5,0.6,0.7, 0.8, 0.9]
+
+- 'colsample_bytree' is the subsample ratio of columns when constructing each tree. Subsampling occurs once for every tree constructed.
+
+        Ex:- 'colsample_bytree': [0.2, 0.5, 0.7, 0.8, 1]
+
+- 'learning_rate' specifies step size used for preventing overfitting, learning_rate shrinks the feature weights to make the boosting process more conservative.
+
+        Ex:- 'learning_rate':[.01,0.1,0.2,0.3,0.5, 0.7, 0.9]
+
+- 'reg_alpha': [0, 0.5, 1]
+- 'reg_lambda': [1, 1.5, 2]
+- 'n_estimators': [20, 50, 100, 250, 500,1000]
