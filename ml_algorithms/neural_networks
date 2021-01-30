@@ -1,0 +1,29 @@
+- Hyper parameters for neural networks
+
+- Number of input and output neurons is quite obvious while doing a neural network architecture, but the number of hidden layers and no.of neurons in each layers is still variable and needs to be adjusted.
+
+- Activation functions
+        - softmax: multi-class classification, ensures the sum of probablities of neurons to 1
+        - elu
+        - selu
+        - softplus
+        - softsign
+        - relu - only for hidden layers
+        - tanh - mostly for hidden layers
+        - sigmoid - used for binary classification
+        - exponential
+        - linear - output layer for regression
+
+- Regularizatoin: L1, L2 dropout
+
+- Batch Normalization
+
+- batch_size: usually 32 or less
+
+- learning_rate: 0.001 to 0.1
+
+- 
+
+- No. of dropout neurons(probablity rate?)
+
+- 
