@@ -1,0 +1,11 @@
+1) csv or tsv.zip files:
+
+    a) Use pandas for reading csv files, even if they are in zip files.
+
+        import pandas as pd
+        df = pd.read_csv(filepath)
+
+2) zip files:
+
+
+

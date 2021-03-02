@@ -4,7 +4,8 @@ Reading:
 
 competitions:
 1) https://www.kaggle.com/c/word2vec-nlp-tutorial#description
-2) https://www.kaggle.com/c/tweet-sentiment-extraction/data
-3) https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
-4) https://www.kaggle.com/c/quora-question-pairs
-5) https://www.kaggle.com/c/spooky-author-identification
+2) https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews
+3) https://www.kaggle.com/c/tweet-sentiment-extraction/data
+4) https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
+5) https://www.kaggle.com/c/quora-question-pairs
+6) https://www.kaggle.com/c/spooky-author-identification
