@@ -7,5 +7,19 @@
 
 2) zip files:
 
+3) Accesssing kaggle datasets from google colab
 
+    a) Download kaggle.json file from kaggle account.
+    b) execute below command in google colab to install kaggle.
+        !pip install -q kaggle
+    c) Upload kaggle.json. 
+    d) Execute below commands
+        ! mkdir ~/.kaggle
+        ! cp kaggle.json ~/.kaggle/
+        ! chmod 600 ~/.kaggle/kaggle.json
+    e) list available datasets in kaggle
+        ! kaggle datasets list
+    f) Download the dataset using below command
+        ! kaggle datasets download -d danielwillgeorge/glove6b100dtxt
+        ! unzip glove6b100dtxt.zip -d glove100
 
